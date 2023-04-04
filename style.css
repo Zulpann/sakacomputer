@@ -281,7 +281,7 @@ section .contain-sec-b img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 7px solid #FC4AF9;
+    border: 6px solid #FC4AF9;
     border-radius: 32px;
     transition-timing-function: ease-out;
     transition: 0.5s;
