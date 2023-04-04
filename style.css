@@ -153,6 +153,7 @@ nav ul li a {
 header {
     padding: 60px 0;
     display: flex;
+    align-items: center;
     gap: 14px;
 }
 header .title {
@@ -429,8 +430,10 @@ section .contain-sec-b img {
 /* SPAREPART */
 .contain-sec-sparepart {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
-.contain-sec-sparepart img {
+.contain-sec-sparepart .img-sparepart {
     width: 100%;
 }
 /* END SPAREPART */
@@ -527,6 +530,9 @@ section .contain-sec-b img {
     header .title h1 {
         font-size: 52px;
     }
+    header img {
+        max-width: 480px;
+    }
     .contain-section {
         flex-direction: column;
     }
@@ -560,6 +566,9 @@ section .contain-sec-b img {
         overflow-x: scroll;
         width: 100%;
     }
+    .contain-sec-sparepart .img-sparepart {
+        max-width: 480px;
+    }
 
 
     /* Sembunyikan scrollbar dari Chrome, Safari dan Opera */
@@ -582,10 +591,14 @@ section .contain-sec-b img {
     .contain-hightlight-left {
         flex-direction: column;
     }
+    .image-hightlight {
+        max-width: 90%;
+    }
     .p-hightlight {
         text-align: start;
     }
     .contain-hightlight-right {
+        align-items: center;
         flex-direction: column;
     }
     .contain-about-right {
