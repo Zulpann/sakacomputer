@@ -301,17 +301,16 @@ section .contain-sec-b img {
     justify-content: center;
 }
 .card-container ul {
-    border-radius: 22px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
-    list-style: none;
 }
 .card-container ul li {
-    font-size: 22px;
+    /* font-size: 22px; */
     font-weight: 600;
-    color:#4e4e4e
+    color:#4e4e4e;
+    margin-left: 20px;
+    font-size: 22px;
 }
 .section-ops .p-sec-b {
     padding: 0 26px;
