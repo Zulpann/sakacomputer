@@ -509,7 +509,7 @@ section .contain-sec-b img {
 /**** RESPPNSIVE ****/
 
 /* Mobile Mode */
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 820px) {
     .reseting {
         margin: 0px 30px;
     }
@@ -595,7 +595,7 @@ section .contain-sec-b img {
 }
 
 /* Tablet Mode */
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 820px) {
     .big-button {
         font-size: 16px;
         border-radius: 32px;
