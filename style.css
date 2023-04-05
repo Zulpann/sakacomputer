@@ -310,7 +310,7 @@ section .contain-sec-b img {
     transition: 0.5s;
 }
 .card-container:hover {
-    border: 7px solid #5761F1;
+    border: 6px solid #5761F1;
 }
 .card-container .bg-2  {
     border-radius: 22px;
