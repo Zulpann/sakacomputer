@@ -20,12 +20,19 @@ body {
 }
 .container .vector-bg {
     position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 60%;
+    position: fixed;
     z-index: -1;
     border-radius: 32px;
-
+}
+.v-b-g-a {
+    top: -80px;
+    right: -80px;
+    max-width: 400px;
+}
+.v-b-g-b {
+    bottom: -180px;
+    left: -80px;
+    max-width: 400px;
 }
 
 
