@@ -1,12 +1,12 @@
 /* Google Fonts */
 /* Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: poppins;
+    font-family: poppins, Arial, Helvetica, sans-serif;
 }
 body {
     background-color: #F2F3F7;    
@@ -50,6 +50,10 @@ body {
     padding-bottom: 40px;
 }
 
+.nav-product-active {
+    background-color: #FC4AF9;
+}
+
 
 /* DEFAULDTING ELEMENT */
 a {
@@ -83,37 +87,37 @@ a:hover{
     font-size: 16px;
     font-weight: 600;
     width:fit-content;
+    transition: 0.1s;
 }
 .medium-button:hover {
     background-color: black;
     color: #fff;
-    transition: 0.1s;
 }
 .small-button {
-    background-color: rgba(255, 255, 255, 0);
+    color: #363636;
     border: none;
     padding: 10px 16px;
     font-size: 16px;
     width:100%;
+    transition: 0.1s;
 }
 .lihat {
-    color: #363636;
+    background-color:#69696921;
     border-radius: 8px 8px 8px 22px;
-    font-weight: 500;
+    font-weight: 600;
 }
 .lihat:hover {
-    background-color: #FC4AF9;
-    color: white;
+    text-decoration: underline;
+    border-radius: 8px 8px 8px 8px;
 }
 .beli {
-    background-color: white;
+    color: white;
+    background: linear-gradient(to right, #FC4AF9 0%, #6b71c7 100%);
     border-radius: 8px 8px 22px 8px;
     font-weight: 600;
-
 }
 .beli:hover {
-    background-color: #43A8FA;
-    color: white;
+    border-radius: 8px 8px 8px 8px;
 }
 .reseting {
     margin: 0px 60px;
@@ -378,12 +382,16 @@ section .contain-sec-b img {
 .navigation-product ul {
     display: flex;
     list-style: none;
+    border-radius: 32px;
     gap: 10px;
+    padding: 4px;
+    justify-content: center;
+    background: linear-gradient(to right, #FC4AF9 0%, #6b71c7 100%);
 }
 .navigation-product ul li {
     font-size: 16px;
     font-weight: 600;
-    background-color: white;
+    color: white;
     border: 2.5px solid white;
     padding: 10px 18px;
     border-radius: 32px;
@@ -392,12 +400,15 @@ section .contain-sec-b img {
     -moz-user-select:none;
     -ms-user-select:none;
     -khtml-user-select:none;
-    -webkit-user-select:none
+    -webkit-user-select:none;
+    transition: 0.1s;
 }
 .navigation-product ul li:hover {
-    cursor: pointer;
-    border: 2.5px solid #FC4AF9;
-    transition: 0.1s;
+    background-color: white;
+    color: #524f4f;
+    /* background: linear-gradient(to right, #FC4AF9 0%, #5761F1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 .wraper-card-laptop {
     display: flex;
@@ -428,8 +439,18 @@ section .contain-sec-b img {
     -khtml-user-select:none;
     -webkit-user-select:none
 }
-.card-laptop .image-laptop {
+.card-laptop span {
+    border-radius: 8px;
+    display: flex;
     width: 200px;
+    overflow: hidden;
+}
+.card-laptop .image-laptop {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.card-laptop .image-laptop:hover {
+    transform: scale(1.04);
 }
 .card-laptop .action {
     display: flex;
