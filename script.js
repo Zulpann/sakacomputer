@@ -13,13 +13,16 @@ wraperCardProvesional.style.display = "none"
 const wraperCardMultimedia = document.querySelector('.wrap-multimedia');
 wraperCardMultimedia.style.display = "none"
 
+wraperCardGaming.style.display = "flex"
+
+
 const gaming = document.getElementById('gaming')
 gaming.addEventListener('click', function(){
     wraperCardGaming.style.display = "flex"
     if(true){
         wraperCardProvesional.style.display = "none"
         wraperCardMultimedia.style.display = "none"
-    }
+    } 
 });
 const profesional = document.getElementById('personal')
 profesional.addEventListener('click', function(){
@@ -37,3 +40,18 @@ multimedia.addEventListener('click', function(){
         wraperCardProvesional.style.display = "none"
     }
 });
+
+
+const navigationBar = document.getElementById('navbar')
+
+const ctogle = document.getElementById('ctogle');
+const togle = document.querySelector('.togle');
+
+
+console.log(navigationBar)
+togle.addEventListener('click', function(){
+    navigationBar.setAttribute('class', 'on')
+})
+togle.addEventListener('dblclick', function(){
+    navigationBar.setAttribute('class', 'off')
+})

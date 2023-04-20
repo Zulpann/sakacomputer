@@ -12,15 +12,16 @@ body {
     background-color: black;
 }
 .body-container {
-
+    width: 100%;
 }
 .container {
+    padding-top: 80px;
     position: relative;
     max-width: 1000px;
     margin: auto;
 }
 .bg-gray {
-    background: #FC4AF9;
+    background: #fc4af9;
     background: linear-gradient(to top, #58585803 0%, #5761f103 100%);
 }
 .container .vector-bg {
@@ -31,8 +32,10 @@ body {
     position: fixed;
     top: 0px;
     z-index: -1;
-    opacity: 0.5;
-    border-radius: 0 0 32px 32px;
+    opacity: 0.2;
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
 }
 .v-b-g-b {
     position: fixed;
@@ -55,28 +58,37 @@ body {
     background-color: #FC4AF9;
 }
 
+.on {
+    display: flex;
+}
+.off {
+    display: none;
+}
+
 
 /* DEFAULDTING ELEMENT */
 a {
     text-decoration: none;
-    color: #838383;
+    color: white;
 }
 a:hover{
-    color: black;
+    text-decoration: underline;
     transition: 0.1s;
 }
 .big-button {
     background-color: rgba(255, 255, 255, 0);
-    border: solid #4650EF 2.4px;
-    color: #4650EF;
+    border: solid rgb(255, 255, 255) 2.4px;
+    color: white;
     border-radius: 22px;
     padding: 12px 18px;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
 }
 .big-button:hover {
-    background-color: #4650EF;
-    color: #fff;
+    border: solid white 2.4px;
+    background-color: rgb(255, 255, 255);
+    color: black;
     transition: 0.1s;
 }
 .medium-button {
@@ -95,7 +107,7 @@ a:hover{
     color: #fff;
 }
 .small-button {
-    color: #363636;
+    color: rgb(100, 100, 100);
     border: none;
     padding: 10px 16px;
     font-size: 16px;
@@ -103,7 +115,6 @@ a:hover{
     transition: 0.1s;
 }
 .lihat {
-    background-color:#69696921;
     border-radius: 8px 8px 8px 22px;
     font-weight: 600;
 }
@@ -133,7 +144,7 @@ a:hover{
     line-height: 128%;
 }
 .paragraph {
-    font-size: 20px;
+    font-size: 18px;
     color: #353434;
     font-weight: 500;
     line-height: 128%;
@@ -145,10 +156,21 @@ a:hover{
 
 /**** NAVIGATION ****/
 nav {
-    padding-top: 40px;
+    position: fixed;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    background: linear-gradient(to left, #fc4af9f6 0%, #5a62d8f3 100%);
+    z-index: 5;
+    padding: 10px 20px;
+}
+#ctogle {
+    display: none;
+    left: 23px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
 }
 nav .togle {
     display: flex;
@@ -156,11 +178,12 @@ nav .togle {
     justify-content: space-between;
     width: 46px;
     height: 25px;
+    cursor: pointer;
 }
 .togle span {
     width: 100%;
     height: 5px;
-    background-color:#535353;
+    background-color:white;
     border-radius: 12px;
 }
 nav ul {
@@ -178,6 +201,8 @@ nav ul li a {
 }
 nav ul li a:hover {
     background-color: white;
+    color: #353434;
+    text-decoration: none;
 }
 /* END NAVIGATION */
 
@@ -203,6 +228,9 @@ header .title h1 {
     -webkit-text-fill-color: transparent;
     line-height: 98%;
     z-index: 1;
+}
+header .title h1 span {
+    color: whi;
 }
 header .title h2 {
     width: 80%;
@@ -284,7 +312,13 @@ section .contain-sec-b {
 }
 section .contain-sec-b img {
     max-width: 480px;
+    transition: all 0.3s ease;
+
 }
+section .contain-sec-b img:hover  {
+    transform: scale(1.04);
+}
+
 /* Service */
 .section-ops {
     padding: 40px 0;
@@ -327,6 +361,10 @@ section .contain-sec-b img {
     border-radius: 22px;
     outline: 10px solid #ffffff;
     z-index: 2;
+    transition: all 0.3s ease;
+}
+.card-container .bg-2:hover  {
+    transform: scale(1.01);
 }
 .card-container .card-desc {
     width: 50%;
@@ -378,7 +416,7 @@ section .contain-sec-b img {
 }
 .head-product h6 {
     font-size: 24px;
-    color:#424242;
+    color: white;
 }
 .navigation-product {
     display: flex;
@@ -485,6 +523,11 @@ section .contain-sec-b img {
 }
 .contain-sec-sparepart .img-sparepart {
     width: 100%;
+    transition: all 0.3s ease;
+}
+.contain-sec-sparepart .img-sparepart:hover {
+    transform: scale(1.02);
+
 }
 /* END SPAREPART */
 
@@ -506,7 +549,17 @@ section .contain-sec-b img {
 }
 .contain-hightlight-right {
     display: flex;
+    justify-content: center;
+    gap: 10px;
     width: 100%;
+}
+.contain-hightlight-right .image-hightlight {
+    max-width: 360px;
+    transition: all 0.3s ease;
+
+}
+.contain-hightlight-right .image-hightlight:hover {
+    transform: scale(1.02);
 }
 .bg-hg {
     /* display: none; */
@@ -530,6 +583,7 @@ section .contain-sec-b img {
     gap: 14px;
 }
 .p-about {
+    color: white;
 }
 .p-about strong {
     font-size: 32px;
@@ -557,11 +611,17 @@ section .contain-sec-b img {
     justify-content: space-between;
     gap: 20px
 }
+.petaend, .ft-left span p {
+    color: white;
+}
 .p-peta {
     width: 76%;
 }
 .footer {
     justify-content: space-between;
+}
+.footer p {
+    color: white;
 }
 
 /**** RESPPNSIVE ****/
@@ -575,13 +635,37 @@ section .contain-sec-b img {
         margin: 0px 30px;
     }
     nav {
-        padding-top: 30px;
+        justify-content: space-between;
+    }
+    #ctogle {
+        display: block;
+    }
+    nav ul {
+        padding: 18px;
+        border-radius: 18px;
+        top: 80px;
+        left: 10px;
+        gap: 20px;
+        position: absolute;
+        /* display: flex; */
+        flex-direction: column;
+        background-color: #5a62d8;
+        /* background: linear-gradient(to left, #FC4AF9 5%, #5a62d8 95%); */
+    }
+    nav ul li a {
+        font-size: 14px;
     }
     header {
         flex-direction: column;
     }
+    header .title {
+        text-align: center;
+    }
     header .title h1 {
         font-size: 52px;
+    }
+    header .title h2 {
+        width: 100%;
     }
     header img {
         max-width: 480px;
@@ -618,14 +702,14 @@ section .contain-sec-b img {
         top: 10px;
     }
     .navigation-product {
-        justify-content: start;
+        justify-content: center;
         overflow-x: scroll;
         width: 100%;
     }
     .contain-sec-sparepart .img-sparepart {
         max-width: 480px;
     }
-
+    
 
     /* Sembunyikan scrollbar dari Chrome, Safari dan Opera */
     .navigation-product::-webkit-scrollbar {
